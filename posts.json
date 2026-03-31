@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Building a Modern Blog with Vanilla JavaScript",
+      "date": "2026-03-31",
+      "description": "Learn how to create a fast, responsive blog using only HTML, CSS, and JavaScript—no frameworks required.",
+      "tags": ["javascript", "web-dev", "tutorial"],
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+      "content": "<p>Creating a blog from scratch might seem daunting, but with modern web standards, it's surprisingly straightforward. In this post, we'll explore how to build a lightning-fast blog using vanilla JavaScript.</p><h2>Why Vanilla JS?</h2><p>Frameworks like React and Vue are powerful, but they come with overhead. For a simple blog, vanilla JavaScript offers:</p><ul><li>Faster load times</li><li>Zero dependencies</li><li>Complete control over the DOM</li><li>Easy deployment to static hosts like GitHub Pages</li></ul><h2>The Architecture</h2><p>We'll use a JSON file as our database, which allows us to add posts without touching HTML. The JavaScript will dynamically render content based on URL parameters.</p><pre><code>// Loading posts dynamically\nfetch('posts.json')\n  .then(res => res.json())\n  .then(data => renderPosts(data.posts));</code></pre><p>Stay tuned for more tutorials on web development!</p>"
+    },
+    {
+      "id": "2",
+      "title": "Mastering CSS Grid and Flexbox",
+      "date": "2026-03-28",
+      "description": "A deep dive into modern CSS layout techniques that will change how you design web interfaces.",
+      "tags": ["css", "design", "responsive"],
+      "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&q=80",
+      "content": "<p>CSS has evolved dramatically over the past decade. Today, we have powerful tools like Grid and Flexbox that make complex layouts surprisingly simple.</p><h2>Flexbox for One-Dimensional Layouts</h2><p>When you're aligning items in a row or column, Flexbox is your best friend. It's perfect for:</p><ul><li>Navigation bars</li><li>Card components</li><li>Centering elements</li></ul><h2>Grid for Two-Dimensional Layouts</h2><p>When you need to control both rows and columns simultaneously, CSS Grid shines. It's ideal for:</p><ul><li>Page layouts</li><li>Photo galleries</li><li>Dashboard interfaces</li></ul><p>Understanding when to use each tool is key to writing maintainable CSS.</p>"
+    },
+    {
+      "id": "3",
+      "title": "The Future of Web Development",
+      "date": "2026-03-25",
+      "description": "Exploring emerging trends in 2026: AI-assisted coding, WebAssembly, and the new era of static sites.",
+      "tags": ["future", "ai", "webassembly"],
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+      "content": "<p>The web development landscape is shifting rapidly. Let's look at what's on the horizon for 2026 and beyond.</p><h2>AI-Assisted Development</h2><p>Tools like GitHub Copilot have evolved from autocomplete into genuine pair programmers. They're not replacing developers—they're amplifying our capabilities.</p><h2>WebAssembly Maturation</h2><p>WASM is no longer just for porting C++ games to the browser. It's becoming a target for high-performance web applications, from video editing to CAD software.</p><h2>The Static Site Renaissance</h2><p>With platforms like GitHub Pages, Netlify, and Vercel, static sites are experiencing a renaissance. Combined with JavaScript frameworks that hydrate into SPAs, we get the best of both worlds: fast initial loads and rich interactivity.</p>"
+    }
+  ]
+}
