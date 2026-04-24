@@ -13,31 +13,6 @@ function formatDate(dateString) {
     return new Date(dateString).toLocaleDateString('en-US', options);
 }
 
-// Theme Management
-function initTheme() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Set initial theme
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (systemPrefersDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    
-    // Toggle theme
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-    }
-}
-
 // Fetch and parse posts
 async function fetchPosts() {
     try {
@@ -65,7 +40,6 @@ async function renderPostsList() {
         return;
     }
     
-    // Sort by date (newest first)
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
     
     grid.innerHTML = posts.map(post => `
@@ -113,10 +87,8 @@ async function renderSinglePost() {
         return;
     }
     
-    // Update page title
     document.title = `${post.title} | Modern Blog`;
     
-    // Calculate read time (rough estimate: 200 words per minute)
     const wordCount = post.content.replace(/<[^>]*>/g, '').split(/\s+/).length;
     const readTime = Math.ceil(wordCount / 200);
     
@@ -141,11 +113,7 @@ async function renderSinglePost() {
     `;
 }
 
-// Initialize based on current page
 function init() {
-    initTheme();
-    
-    // Check if we're on the homepage or post page
     const path = window.location.pathname;
     const isPostPage = path.includes('post.html') || document.getElementById('post-content');
     
@@ -156,7 +124,6 @@ function init() {
     }
 }
 
-// Run when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
