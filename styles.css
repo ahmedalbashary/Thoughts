@@ -1,3 +1,4 @@
+/* Sticky Email Button */
 .sticky-email {
     position: fixed;
     bottom: 1.5rem;
@@ -7,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--accent-color);
+    background-color: #2563eb;
     color: #ffffff;
     border-radius: 50%;
     text-decoration: none;
@@ -19,9 +20,19 @@
 .sticky-email:hover {
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-    background-color: var(--accent-hover);
+    background-color: #1d4ed8;
 }
 
 .sticky-email svg {
     stroke: #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sticky-email {
+        bottom: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
 }
