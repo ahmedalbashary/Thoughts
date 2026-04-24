@@ -1,49 +1,27 @@
-/* Sticky Email Button */
 .sticky-email {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
     background-color: var(--accent-color);
     color: #ffffff;
-    padding: 0.875rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 50%;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-    transition: var(--transition);
+    transition: all 0.3s ease;
     z-index: 1000;
-    cursor: pointer;
 }
 
 .sticky-email:hover {
-    transform: translateY(-3px) scale(1.02);
+    transform: translateY(-3px) scale(1.1);
     box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
     background-color: var(--accent-hover);
 }
 
 .sticky-email svg {
-    flex-shrink: 0;
-}
-
-/* Mobile: smaller button */
-@media (max-width: 768px) {
-    .sticky-email {
-        bottom: 1.5rem;
-        right: 1.5rem;
-        padding: 0.75rem 1.25rem;
-        font-size: 0.9rem;
-    }
-    
-    .sticky-email span {
-        display: none; /* hide text on mobile, show icon only */
-    }
-    
-    .sticky-email {
-        padding: 0.875rem;
-        border-radius: 50%;
-    }
+    stroke: #ffffff;
 }
