@@ -1,5 +1,5 @@
 /**
- * ModernBlog – script.js
+ * Ahmed Ashraf – script.js
  * -------------------------------------------------------
  * Handles:
  *   - Fetching posts from posts.json
