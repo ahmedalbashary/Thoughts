@@ -176,7 +176,7 @@ async function renderSinglePost() {
   }
 
   // Update page <title>
-  document.title = `${post.title} | ModernBlog`;
+  document.title = `${post.title} | Ahmed Ashraf`;
 
   const rt = readingTime(post.content);
   const tagsHTML = post.tags.map(t => `<span class="tag">${t}</span>`).join('');
