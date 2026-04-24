@@ -1,46 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Blog</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ModernBlog – Thoughts, Stories & Ideas. A minimal blog built with vanilla JavaScript.">
+  <title>ModernBlog</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">ModernBlog</a>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-title fade-in">Thoughts, Stories & Ideas</h1>
-            <p class="hero-subtitle fade-in delay-1">A minimal blog built with vanilla JavaScript and modern CSS</p>
-        </div>
-    </header>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Modern<span>Blog</span></a>
 
-    <main class="container">
-        <div id="posts-grid" class="posts-grid"></div>
-    </main>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mailto:ahmed.a.elbashary@gmail.com">Contact</a></li>
+      </ul>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 ModernBlog. Built for GitHub Pages.</p>
-        </div>
-    </footer>
+      <!-- Mobile hamburger -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Sticky Email Button -->
-    <a href="mailto:ahmed.a.elbashary@gmail.com" class="sticky-email" aria-label="Send email">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-        </svg>
-    </a>
+  <!-- ===== HERO ===== -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <p class="hero-eyebrow">Welcome to the blog</p>
+      <h1 class="hero-title">Thoughts, Stories<br>& <em>Ideas</em></h1>
+      <p class="hero-subtitle">Exploring psychology, design, and the ideas that shape how we think.</p>
+      <div class="hero-divider">
+        <span class="hero-divider-dot"></span>
+        <span class="hero-divider-dot"></span>
+        <span class="hero-divider-dot"></span>
+      </div>
+    </div>
+  </header>
 
-    <script src="script.js"></script>
+  <!-- ===== POSTS GRID ===== -->
+  <main class="posts-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Latest Articles</span>
+      </div>
+      <!-- Posts are injected here by script.js -->
+      <div id="posts-grid" class="posts-grid"></div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">ModernBlog</span>
+        <p class="footer-copy">&copy; 2026 ModernBlog. Built for GitHub Pages.</p>
+        <ul class="footer-links">
+          <li><a href="mailto:ahmed.a.elbashary@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY EMAIL BUTTON ===== -->
+  <a href="mailto:ahmed.a.elbashary@gmail.com" class="sticky-email" aria-label="Send email">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <rect width="20" height="16" x="2" y="4" rx="2"/>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
